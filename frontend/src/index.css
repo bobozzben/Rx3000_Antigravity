@@ -1,0 +1,75 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom FoxPro AG Grid Styling Override */
+.ag-theme-alpine.foxpro-grid {
+  --ag-font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  --ag-font-size: 16px;
+  --ag-grid-size: 6px;
+  --ag-row-height: 38px;
+  --ag-header-height: 40px;
+  --ag-header-background-color: #1e3a8a;
+  --ag-header-foreground-color: #ffffff;
+  --ag-row-hover-color: #e0f2fe;
+  --ag-selected-row-background-color: #dbeafe;
+  --ag-cell-horizontal-padding: 8px;
+}
+
+/* Header style override */
+.ag-theme-alpine.foxpro-grid .ag-header {
+  background-color: #1e3a8a !important;
+  border-bottom: 2px solid #1d4ed8 !important;
+}
+
+.ag-theme-alpine.foxpro-grid .ag-header-cell {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  border-right: 1px solid #3b82f6;
+  font-size: 16px;
+}
+
+.ag-theme-alpine.foxpro-grid .ag-header-cell-text {
+  color: #ffffff !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Yellow 2px outer border for focused cell */
+.ag-theme-alpine.foxpro-grid .ag-cell-focus {
+  border: 2.5px solid #eab308 !important;
+  outline: none !important;
+  box-shadow: inset 0 0 4px rgba(234, 179, 8, 0.5) !important;
+  background-color: #fef9c3 !important;
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+/* Zebra striping */
+.ag-theme-alpine.foxpro-grid .ag-row-even {
+  background-color: #f9fafb;
+}
+
+.ag-theme-alpine.foxpro-grid .ag-row-odd {
+  background-color: #ffffff;
+}
+
+/* Inline cell editing inputs */
+.ag-theme-alpine.foxpro-grid .ag-cell-inline-editing {
+  background-color: #fef08a !important;
+  padding: 0 !important;
+  border: 2.5px solid #ca8a04 !important;
+}
+
+.ag-theme-alpine.foxpro-grid .ag-cell-inline-editing input {
+  font-family: 'Consolas', 'Monaco', monospace !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  color: #000000 !important;
+  background-color: #fef08a !important;
+  padding: 0 6px !important;
+  outline: none !important;
+}
