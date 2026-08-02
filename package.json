@@ -1,0 +1,14 @@
+{
+  "name": "rx3000-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:api\" \"pnpm dev:web\"",
+    "dev:web": "pnpm --filter frontend dev",
+    "dev:api": "pnpm --filter backend dev",
+    "ngrok": "ngrok http 5173"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
